@@ -25,12 +25,7 @@ jobs:
           echo "$WEATHER" > weather.txt
 
       - name: Write weather to file
-        run: |
-          CITY="LONDON"
-          WEATHER=$(curl -s "wttr.in/$CITY?format=3")
-          echo "Weather in $CITY: $WEATHER" > file.txt
-
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: file
-          path: file.txt
+          name: text
+          path: weather.txt
