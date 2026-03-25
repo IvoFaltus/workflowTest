@@ -23,7 +23,7 @@ jobs:
           echo "**$WEATHER**" >> $GITHUB_STEP_SUMMARY
           echo "Weather in $CITY: $WEATHER" >> file.txt
 
-      - uses: actions/upload-artifact@3
+      - uses: actions/upload-artifact@4
         with:
           name: file
           path: file.txt
