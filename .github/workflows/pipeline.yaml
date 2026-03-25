@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "* * * * *"
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 jobs:
@@ -21,3 +21,4 @@ jobs:
           echo "## $CITY Weather" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**$WEATHER**" >> $GITHUB_STEP_SUMMARY
+          echo "Weather in $CITY: $WEATHER" >> file.txt
